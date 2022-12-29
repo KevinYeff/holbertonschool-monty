@@ -1,5 +1,11 @@
 #ifndef MONTY_H
-#define MONTY_h
+#define MONTY_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <unistd.h>
 
 /* errors */
 #define EXIT_SUCCESS 0
@@ -17,9 +23,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /* typedef instructions*/
@@ -33,8 +39,39 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/**
+ * struct info_s - doubly linked list representation of a stack (or queue)
+ * @type: integer
+ * @fp: document
+ * @head: DLL head
+ * @opcode: opcode
+ * @argum: argument@
+ * @ndata: DLL data
+ * @line_num: line number
+ *
+ * Description: doubly linked list node structure
+ * for stack, queues, LIFO, FIFO
+ */
+typedef struct info_s
+{
+	int type;
+	FILE *fp;
+	stack_t *head;
+	char *opcode;
+	char *argum;
+	int ndata;
+	unsigned int line_num;
+} info_t;
+
+info_t var;
+
+/*prototypes*/
+void exec_opcode(char *opcode);
+void push_op(stack_t **stack, unsigned int line_number);
+
 
 #endif
