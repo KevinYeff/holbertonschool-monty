@@ -42,6 +42,8 @@ int main(int argc, char **argv)
 		var.argum = strtok(NULL, " \t\n");
 		exec_opcode(var.opcode);
 	}
+	/* Freeing*/
+	freeStack();
 
 	/* Cerrar el archivo */
 	fclose(var.fp);
