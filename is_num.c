@@ -7,6 +7,11 @@
  */
 int is_num(char *s)
 {
+	if(var.opcode && var.argum == NULL)
+	{
+		return(0);
+	}	
+
 	if (s == NULL || strlen(s) == 0)
 		return (0);
 
