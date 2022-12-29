@@ -14,20 +14,20 @@ void exec_opcode(char *opcode)
 	instruction_t opcode_list[] = {
 		{"push", push_op},
 		{"pall", pall_op},
-		{NULL, NULL},
-};
+		{NULL, NULL}
+	};
 
-while ((opcode_list[counter].opcode != NULL))
-{
-	if (strcmp(opcode, opcode_list[counter].opcode) == 0)
+	while ((opcode_list[counter].opcode != NULL))
 	{
-		opcode_list[counter].f(&var.head, var.line_num);
-		return;
+		if (strcmp(opcode, opcode_list[counter].opcode) == 0)
+		{
+			opcode_list[counter].f(&var.head, var.line_num);
+			return;
+		}
+		counter++;
 	}
-	counter++;
-}
 
-fprintf(stderr, "L%u unknown instruction %s\n", var.line_num, opcode);
-fclose(var.fp);
-exit(EXIT_FAILURE);
+	fprintf(stderr, "L%u unknown instruction %s\n", var.line_num, opcode);
+	fclose(var.fp);
+	exit(EXIT_FAILURE);
 }
