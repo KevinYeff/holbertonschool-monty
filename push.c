@@ -12,7 +12,7 @@ void push_op(stack_t **stack, unsigned int line_number)
 	int temp;
 	stack_t *new;
 
-	if (!is_num(var.argum))
+	if (var.argum == NULL || !is_num(var.argum))
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", var.line_num);
 		freeStack();
