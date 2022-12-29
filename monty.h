@@ -74,6 +74,7 @@ void exec_opcode(char *opcode);
 void push_op(stack_t **stack, unsigned int line_number);
 void pall_op(stack_t **stack, unsigned int line_number);
 size_t printStack(const stack_t *h);
+int is_num(char *s);
 /* Freeing */
 void freeStack(void);
 void free_dlistint(stack_t *head);
