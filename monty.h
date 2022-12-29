@@ -67,7 +67,7 @@ typedef struct info_s
 	unsigned int line_num;
 } info_t;
 
-info_t var;
+extern info_t var;
 
 /*prototypes*/
 void exec_opcode(char *opcode);

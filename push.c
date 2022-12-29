@@ -12,7 +12,7 @@ void push_op(stack_t **stack, unsigned int line_number)
 	int temp;
 	stack_t *new;
 
-	(void)line_number;
+	(void)line_number, (void)stack;
 
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)

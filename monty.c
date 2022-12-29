@@ -1,5 +1,6 @@
 #include "monty.h"
 
+info_t var = {0, NULL, NULL, NULL, NULL, 0, 1};
 /**
  * main - driver function for monty program
  * @argc: int num of arguments
@@ -10,7 +11,6 @@
 int main(int argc, char **argv)
 {
 	char buff[1024] = {0};
-	info_t var = {0, NULL, NULL, NULL, NULL, 0, 1};
 
 	/* Comprobar que se ha proporcionado un único argumento */
 	if (argc != 2)
