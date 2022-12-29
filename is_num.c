@@ -5,7 +5,7 @@
  * @s: string being passed
  * Return: returns 1 if string is a number, 0 otherwise
  */
-int is_numeric(char *s)
+int is_num(char *s)
 {
 	if (s == NULL || strlen(s) == 0)
 		return (0);
