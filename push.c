@@ -20,7 +20,7 @@ void push_op(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	(void)stack;
+	(void)stack, (void)line_number;
 
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
