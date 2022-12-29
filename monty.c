@@ -1,6 +1,6 @@
 #include "monty.h"
 
-info_t var = {0, NULL, NULL, NULL, NULL, 0, 1};
+info_t var = {0, NULL, NULL, NULL, NULL, 0, 0};
 /**
  * main - driver function for monty program
  * @argc: int num of arguments
