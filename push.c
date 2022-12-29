@@ -12,6 +12,14 @@ void push_op(stack_t **stack, unsigned int line_number)
 	int temp;
 	stack_t *new;
 
+	if (!is_num(var.argum))
+	{
+		fprintf(stderr, "Usage: push integer\n");
+		freeStack();
+		fclose(var.fp);
+		exit(EXIT_FAILURE);
+	}
+
 	(void)line_number, (void)stack;
 
 	new = malloc(sizeof(stack_t));
