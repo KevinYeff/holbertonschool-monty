@@ -30,6 +30,7 @@ int main(int argc, char **argv)
 	/* Leer líneas del archivo */
 	while (fgets(buff, sizeof(buff), var.fp) != NULL)
 	{
+		var.line_num++;
 		/* Separar la línea en palabras */
 		var.opcode = strtok(buff, " \t\n");
 		if (var.opcode == NULL || var.opcode[0] == '#')
@@ -39,7 +40,6 @@ int main(int argc, char **argv)
 		}
 		var.argum = strtok(NULL, " \t\n");
 		exec_opcode(var.opcode);
-		var.line_num++;
 	}
 	/* Freeing*/
 	freeStack();
