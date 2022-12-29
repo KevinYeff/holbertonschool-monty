@@ -13,7 +13,7 @@ void exec_opcode(char *opcode)
 
 	instruction_t opcode_list[] = {
 		{"push", push_op},
-		/*{"pall", pall_op},*/
+		{"pall", pall_op},
 		{NULL, NULL},
 };
 
