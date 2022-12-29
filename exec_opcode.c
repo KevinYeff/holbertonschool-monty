@@ -27,7 +27,7 @@ void exec_opcode(char *opcode)
 		counter++;
 	}
 
-	fprintf(stderr, "L%u unknown instruction %s\n", var.line_num, opcode);
+	fprintf(stderr, "L%u: unknown instruction %s\n", var.line_num, opcode);
 	fclose(var.fp);
 	exit(EXIT_FAILURE);
 }
