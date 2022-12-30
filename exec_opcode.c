@@ -18,6 +18,7 @@ void exec_opcode(char *opcode)
 		{"pop", pop_op},
 		{"swap", swap_op},
 		{"add", add_op},
+		{"nop", nop_op},
 		{NULL, NULL}
 	};
 
