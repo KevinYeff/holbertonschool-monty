@@ -8,6 +8,7 @@
 void swap_op(stack_t **stack, unsigned int line_number)
 {
 	stack_t *top_next;
+	(void)line_number;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
