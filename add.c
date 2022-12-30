@@ -14,7 +14,7 @@ void add_op(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "L%u: usage: can't add, stack too short\n", var.line_num);
+		fprintf(stderr, "L%u: can't add, stack too short\n", var.line_num);
 		freeStack();
 		fclose(var.fp);
 		exit(EXIT_FAILURE);
