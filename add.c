@@ -38,5 +38,6 @@ void add_op(stack_t **stack, unsigned int line_number)
 
 	(top->next)->next = NULL;
 	*stack = new_node;
+	free(new_node);
 }
 
