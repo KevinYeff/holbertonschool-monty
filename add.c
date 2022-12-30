@@ -41,7 +41,7 @@ void add_op(stack_t **stack, unsigned int line_number)
 	
 	while (top != NULL)
 	{
-	free(top->next);
+	free(top);
 	}
 }
 
