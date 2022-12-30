@@ -78,5 +78,6 @@ int is_num(char *s);
 /* Freeing */
 void freeStack(void);
 void free_dlistint(stack_t *head);
-
+/* task 2*/
+void pint_op(stack_t **stack, unsigned int line_number);
 #endif
