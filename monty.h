@@ -80,10 +80,13 @@ void freeStack(void);
 void free_dlistint(stack_t *head);
 /* task 1 */
 void pint_op(stack_t **stack, unsigned int line_number);
-/*task 3 */
+/*task 2 */
 void pop_op(stack_t **stack, unsigned int line_number);
-/* task 4 */
+/* task 3 */
 void swap_op(stack_t **stack, unsigned int line_number);
+/*task 4*/
+void add_op(stack_t **stack, unsigned int line_number);
+
 /* DLL function */
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 #endif

@@ -17,6 +17,7 @@ void exec_opcode(char *opcode)
 		{"pint", pint_op},
 		{"pop", pop_op},
 		{"swap", swap_op},
+		{"add", add_op},
 		{NULL, NULL}
 	};
 
