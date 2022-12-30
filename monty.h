@@ -84,9 +84,10 @@ void pint_op(stack_t **stack, unsigned int line_number);
 void pop_op(stack_t **stack, unsigned int line_number);
 /* task 3 */
 void swap_op(stack_t **stack, unsigned int line_number);
-/*task 4*/
+/* task 4 */
 void add_op(stack_t **stack, unsigned int line_number);
-
+/* task 5 */
+void nop_op(stack_t **stack, unsigned int line_number);
 /* DLL function */
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 #endif
