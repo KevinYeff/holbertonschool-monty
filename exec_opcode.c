@@ -15,6 +15,7 @@ void exec_opcode(char *opcode)
 		{"push", push_op},
 		{"pall", pall_op},
 		{"pint", pint_op},
+		{"swap", swap_op},
 		{NULL, NULL}
 	};
 
