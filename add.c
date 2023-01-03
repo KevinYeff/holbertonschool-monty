@@ -24,9 +24,9 @@ void add_op(stack_t **stack, unsigned int line_number)
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-                freeStack();
-                fclose(var.fp);
-                exit(EXIT_FAILURE);
+		freeStack();
+		fclose(var.fp);
+		exit(EXIT_FAILURE);
 	}
 
 	top = *stack;
